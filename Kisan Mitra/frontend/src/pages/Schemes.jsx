@@ -4,7 +4,7 @@ import { useUser } from '../context/UserContext'
 import { useTranslation } from '../hooks/useTranslation'
 import { useLanguage } from '../context/LanguageContext'
 import { Search, X, ExternalLink, CheckCircle, XCircle, AlertCircle, Bookmark, BookmarkCheck, Share2 } from 'lucide-react'
-import { runWhatIf } from '../utils/eligibilityEngine'
+
 import { toggleBookmark as apiToggleBookmark, getUserBookmarks } from '../utils/api'
 import toast from 'react-hot-toast'
 

@@ -1,42 +1,23 @@
 [
   {
     "id": "pm-kisan",
-    "name": "PM-KISAN",
-    "name_hi": "पीएम-किसान",
-    "name_mr": "पीएम-किसान",
+    "name": "PM-KISAN Samman Nidhi",
     "category": [
       "agriculture",
       "income_support"
     ],
     "benefit_amount": 6000,
     "benefit_type": "cash",
-    "benefit_frequency": "annual",
-    "benefit_description": "₹6000/year direct income support in 3 installments of ₹2000",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual registration open",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": 12.4,
+      "farmer_required": true,
+      "land_required": true,
       "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "max_land_acres": 12.4,
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": [
         "government_employee",
         "income_tax_payer",
@@ -45,2570 +26,897 @@
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
-      "mobile_number"
+      "land_record",
+      "bank_account"
     ],
-    "apply_url": "https://pmkisan.gov.in",
-    "apply_mode": [
-      "online",
-      "CSC"
-    ],
-    "description": "Pradhan Mantri Kisan Samman Nidhi provides income support to all landholding farmer families.",
-    "description_hi": "प्रधानमंत्री किसान सम्मान निधि किसान परिवारों को सालाना ₹6000 की आर्थिक सहायता देती है।",
-    "description_mr": "पंतप्रधान किसान सन्मान निधी शेतकरी कुटुंबांना वार्षिक ₹6000 आर्थिक मदत देते.",
-    "tags": [
-      "income",
-      "direct_benefit",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 78,
-    "ineligibility_rules": {
-      "occupation": "This scheme is only for registered farmers",
-      "disqualifiers": "Government employees and income tax payers are not eligible"
-    }
+    "description": "Pradhan Mantri Kisan Samman Nidhi provides direct income support of \u20b96000/year to all landholding farmer families in 3 equal installments.",
+    "apply_url": "https://pmkisan.gov.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "pmfby",
     "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
-    "name_hi": "प्रधानमंत्री फसल बीमा योजना",
-    "name_mr": "प्रधानमंत्री पीक विमा योजना",
     "category": [
       "agriculture",
       "insurance"
     ],
     "benefit_amount": 200000,
     "benefit_type": "insurance",
-    "benefit_frequency": "per_claim",
-    "benefit_description": "Crop insurance up to ₹2L per hectare. Premium: only 2% for Kharif, 1.5% for Rabi",
-    "deadline": "2025-07-31",
-    "deadline_label": "Kharif season registration",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": null,
+      "farmer_required": true,
+      "land_required": true,
       "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "crop_required": true,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
+      "land_record",
+      "bank_account",
       "sowing_certificate"
     ],
-    "apply_url": "https://pmfby.gov.in",
-    "apply_mode": [
-      "online",
-      "bank",
-      "CSC"
-    ],
-    "description": "Comprehensive crop insurance against natural calamities, pests and diseases at subsidized premiums.",
-    "description_hi": "प्राकृतिक आपदाओं, कीटों और बीमारियों से फसल नुकसान पर बीमा सुरक्षा।",
-    "description_mr": "नैसर्गिक आपत्ती, किड आणि रोगांमुळे पिकाच्या नुकसानीवर विमा संरक्षण.",
-    "tags": [
-      "insurance",
-      "risk_mitigation",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 55,
-    "ineligibility_rules": {
-      "occupation": "Only farmers with cultivable land are eligible"
-    }
+    "description": "Comprehensive crop insurance against natural calamities, pests, and diseases at subsidized premiums (2% for Kharif, 1.5% for Rabi).",
+    "apply_url": "https://pmfby.gov.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "kcc",
     "name": "Kisan Credit Card (KCC)",
-    "name_hi": "किसान क्रेडिट कार्ड",
-    "name_mr": "किसान क्रेडिट कार्ड",
     "category": [
       "agriculture",
       "finance"
     ],
     "benefit_amount": 300000,
     "benefit_type": "credit",
-    "benefit_frequency": "revolving",
-    "benefit_description": "Up to ₹3L revolving credit at 4% effective interest rate after 3% subvention",
-    "deadline": "2026-03-31",
-    "deadline_label": "Always open",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer",
-        "agricultural_laborer",
-        "fisherman",
-        "animal_husbandry"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": 0,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "farmer_required": true,
+      "land_required": false,
       "age_min": 18,
-      "age_max": 75,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": []
-    },
-    "documents_required": [
-      "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
-      "passport_photo",
-      "income_certificate"
-    ],
-    "apply_url": "https://www.nabard.org/auth/writereaddata/tender/1608180417KCC Application Form.pdf",
-    "apply_mode": [
-      "bank",
-      "CSC"
-    ],
-    "description": "Short-term credit for crop production, post-harvest expenses and maintenance of farm assets.",
-    "description_hi": "फसल उत्पादन, कटाई के बाद खर्च और कृषि संपत्ति रखरखाव के लिए अल्पकालिक ऋण।",
-    "description_mr": "पीक उत्पादन, काढणीनंतर खर्च आणि शेत मालमत्ता देखभालीसाठी अल्पकालीन कर्ज.",
-    "tags": [
-      "credit",
-      "finance",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "farmer",
-      "fisherman"
-    ],
-    "quota_filled_percent": 60,
-    "ineligibility_rules": {
-      "age_max": "Applicant must be under 75 years",
-      "must_have": "Land records and bank account are mandatory"
-    }
-  },
-  {
-    "id": "mgnrega",
-    "name": "MGNREGA",
-    "name_hi": "महात्मा गाँधी नरेगा",
-    "name_mr": "महात्मा गांधी नरेगा",
-    "category": [
-      "labor",
-      "employment"
-    ],
-    "benefit_amount": 26700,
-    "benefit_type": "wages",
-    "benefit_frequency": "annual",
-    "benefit_description": "100 days guaranteed wage employment at ₹267/day (national avg). Unemployment allowance if work not given in 15 days.",
-    "deadline": "2026-03-31",
-    "deadline_label": "Ongoing — apply anytime",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": [
-        "government_employee"
-      ],
-      "must_be_rural": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "passport_photo",
-      "ration_card"
-    ],
-    "apply_url": "https://nrega.nic.in",
-    "apply_mode": [
-      "gram_panchayat"
-    ],
-    "description": "Legal guarantee of 100 days of unskilled manual work per year to every rural household.",
-    "description_hi": "हर ग्रामीण परिवार को साल में 100 दिन का रोजगार पाने का कानूनी अधिकार।",
-    "description_mr": "प्रत्येक ग्रामीण कुटुंबाला वर्षातून 100 दिवस अकुशल मजुरी मिळण्याचा कायदेशीर अधिकार.",
-    "tags": [
-      "employment",
-      "wage",
-      "central",
-      "rural"
-    ],
-    "ministry": "Ministry of Rural Development",
-    "beneficiary_type": [
-      "laborer",
-      "farmer",
-      "all_rural"
-    ],
-    "quota_filled_percent": 45,
-    "ineligibility_rules": {
-      "must_be_rural": "Only rural households are eligible",
-      "government_employee": "Government employees are not eligible"
-    }
-  },
-  {
-    "id": "pmay-g",
-    "name": "PM Awas Yojana - Gramin (PMAY-G)",
-    "name_hi": "प्रधानमंत्री आवास योजना - ग्रामीण",
-    "name_mr": "प्रधानमंत्री आवास योजना - ग्रामीण",
-    "category": [
-      "housing",
-      "welfare"
-    ],
-    "benefit_amount": 120000,
-    "benefit_type": "grant",
-    "benefit_frequency": "one_time",
-    "benefit_description": "₹1.2L grant for pucca house construction (plains) or ₹1.3L (hilly/difficult areas)",
-    "deadline": "2026-03-31",
-    "deadline_label": "Awaas+ survey based",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [
-        "government_employee",
-        "income_tax_payer"
-      ],
-      "must_be_rural": true,
-      "must_be_bpl_or_kutcha_house": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "ration_card",
-      "income_certificate",
-      "bpl_card"
-    ],
-    "apply_url": "https://pmayg.nic.in",
-    "apply_mode": [
-      "gram_panchayat",
-      "online"
-    ],
-    "description": "Free pucca house with basic amenities for rural homeless and kutcha house dwellers.",
-    "description_hi": "ग्रामीण बेघर और कच्चे मकान में रहने वालों को पक्का घर बनाने के लिए अनुदान।",
-    "description_mr": "ग्रामीण बेघर आणि कच्च्या घरात राहणाऱ्यांना पक्के घर बांधण्यासाठी अनुदान.",
-    "tags": [
-      "housing",
-      "welfare",
-      "central",
-      "bpl"
-    ],
-    "ministry": "Ministry of Rural Development",
-    "beneficiary_type": [
-      "all_rural"
-    ],
-    "quota_filled_percent": 82,
-    "ineligibility_rules": {
-      "disqualifiers": "Government employees and tax payers are not eligible",
-      "must_be_bpl_or_kutcha_house": "Must be houseless or living in kutcha/dilapidated house"
-    }
-  },
-  {
-    "id": "pm-ujjwala",
-    "name": "PM Ujjwala Yojana (PMUY)",
-    "name_hi": "प्रधानमंत्री उज्ज्वला योजना",
-    "name_mr": "प्रधानमंत्री उज्ज्वला योजना",
-    "category": [
-      "women",
-      "welfare",
-      "energy"
-    ],
-    "benefit_amount": 1600,
-    "benefit_type": "subsidy",
-    "benefit_frequency": "one_time",
-    "benefit_description": "Free LPG connection with first refill and stove. Annual subsidy on refills thereafter.",
-    "deadline": "2026-03-31",
-    "deadline_label": "Always open for BPL women",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "female"
-      ],
-      "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account",
-        "ration_card"
-      ],
-      "disqualifiers": [],
-      "must_be_bpl": true,
-      "no_existing_lpg": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "ration_card",
-      "bpl_card",
-      "passport_photo"
-    ],
-    "apply_url": "https://www.pmuy.gov.in",
-    "apply_mode": [
-      "gas_agency",
-      "online"
-    ],
-    "description": "Free LPG gas connection to BPL women to replace polluting cooking fuels and empower women.",
-    "description_hi": "बीपीएल महिलाओं को मुफ्त एलपीजी कनेक्शन — स्वच्छ ईंधन और स्वास्थ्य के लिए।",
-    "description_mr": "दारिद्र्य रेषेखालील महिलांना मोफत एलपीजी जोडणी — स्वच्छ इंधन आणि आरोग्यासाठी.",
-    "tags": [
-      "women",
-      "energy",
-      "welfare",
-      "central"
-    ],
-    "ministry": "Ministry of Petroleum & Natural Gas",
-    "beneficiary_type": [
-      "women"
-    ],
-    "quota_filled_percent": 88,
-    "ineligibility_rules": {
-      "gender": "Only women can apply for this scheme",
-      "must_be_bpl": "Must belong to BPL household",
-      "no_existing_lpg": "Household must not already have an LPG connection"
-    }
-  },
-  {
-    "id": "ayushman-bharat",
-    "name": "Ayushman Bharat - PM Jan Arogya Yojana",
-    "name_hi": "आयुष्मान भारत - पीएम जन आरोग्य योजना",
-    "name_mr": "आयुष्मान भारत - पीएम जन आरोग्य योजना",
-    "category": [
-      "health",
-      "insurance",
-      "welfare"
-    ],
-    "benefit_amount": 500000,
-    "benefit_type": "health_insurance",
-    "benefit_frequency": "annual",
-    "benefit_description": "₹5 lakh per family per year for secondary and tertiary hospital treatment at empanelled hospitals",
-    "deadline": "2026-03-31",
-    "deadline_label": "Ongoing",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 0,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "ration_card"
-      ],
-      "disqualifiers": [
-        "government_employee",
-        "income_tax_payer"
-      ],
-      "must_be_secc_listed": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "ration_card",
-      "bpl_card"
-    ],
-    "apply_url": "https://pmjay.gov.in",
-    "apply_mode": [
-      "online",
-      "CSC",
-      "hospital"
-    ],
-    "description": "World's largest health insurance scheme giving ₹5L/year coverage to poor rural and urban families.",
-    "description_hi": "गरीब परिवारों को ₹5 लाख तक की स्वास्थ्य बीमा सुरक्षा — सरकारी और प्राइवेट अस्पतालों में।",
-    "description_mr": "गरीब कुटुंबांना सरकारी व खाजगी रुग्णालयांमध्ये ₹5 लाखापर्यंत आरोग्य विमा संरक्षण.",
-    "tags": [
-      "health",
-      "insurance",
-      "central",
-      "bpl"
-    ],
-    "ministry": "Ministry of Health & Family Welfare",
-    "beneficiary_type": [
-      "all_rural",
-      "bpl"
-    ],
-    "quota_filled_percent": 70,
-    "ineligibility_rules": {
-      "must_be_secc_listed": "Must be listed in SECC 2011 or belong to identified vulnerable category",
-      "disqualifiers": "Government employees and income tax payers are excluded"
-    }
-  },
-  {
-    "id": "pmkvy",
-    "name": "PM Kaushal Vikas Yojana (PMKVY)",
-    "name_hi": "प्रधानमंत्री कौशल विकास योजना",
-    "name_mr": "प्रधानमंत्री कौशल विकास योजना",
-    "category": [
-      "education",
-      "skill",
-      "youth"
-    ],
-    "benefit_amount": 8000,
-    "benefit_type": "training_reward",
-    "benefit_frequency": "one_time",
-    "benefit_description": "Free skill training in 300+ courses + ₹8000 reward on certification + placement support",
-    "deadline": "2026-03-31",
-    "deadline_label": "Rolling admissions",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 15,
-      "age_max": 45,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [
-        "government_employee"
-      ],
-      "must_be_unemployed_or_dropout": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "education_certificate",
-      "passport_photo"
-    ],
-    "apply_url": "https://www.pmkvyofficial.org",
-    "apply_mode": [
-      "online",
-      "skill_center"
-    ],
-    "description": "Free industry-relevant skill training to unemployed youth and school/college dropouts with certification.",
-    "description_hi": "बेरोजगार युवाओं और स्कूल/कॉलेज छोड़ने वालों के लिए मुफ्त कौशल प्रशिक्षण और ₹8000 इनाम।",
-    "description_mr": "बेरोजगार तरुण आणि शाळा/कॉलेज सोडलेल्यांसाठी मोफत कौशल्य प्रशिक्षण आणि ₹8000 बक्षीस.",
-    "tags": [
-      "skill",
-      "youth",
-      "employment",
-      "central"
-    ],
-    "ministry": "Ministry of Skill Development & Entrepreneurship",
-    "beneficiary_type": [
-      "youth",
-      "laborer"
-    ],
-    "quota_filled_percent": 50,
-    "ineligibility_rules": {
-      "age_min": "Must be at least 15 years old",
-      "age_max": "Must be under 45 years old",
-      "government_employee": "Government employees are not eligible"
-    }
-  },
-  {
-    "id": "pm-vishwakarma",
-    "name": "PM Vishwakarma Yojana",
-    "name_hi": "पीएम विश्वकर्मा योजना",
-    "name_mr": "पीएम विश्वकर्मा योजना",
-    "category": [
-      "artisan",
-      "finance",
-      "skill"
-    ],
-    "benefit_amount": 300000,
-    "benefit_type": "credit_plus_training",
-    "benefit_frequency": "one_time",
-    "benefit_description": "₹15000 toolkit stipend + free skill training + ₹1L (Phase 1) then ₹2L (Phase 2) loan at 5% interest",
-    "deadline": "2026-03-31",
-    "deadline_label": "Rolling registrations",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "artisan"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [
-        "government_employee"
-      ],
-      "craft_types": [
-        "carpenter",
-        "blacksmith",
-        "potter",
-        "weaver",
-        "cobbler",
-        "tailor",
-        "goldsmith",
-        "barber",
-        "washerman",
-        "sculptor",
-        "mason",
-        "boat_maker",
-        "armourer",
-        "locksmith",
-        "hammer_tool_kit",
-        "fishing_net_maker",
-        "doll_toy_maker"
+        "defaulter"
       ]
     },
     "documents_required": [
       "aadhaar",
-      "bank_passbook",
-      "trade_certificate",
-      "passport_photo",
-      "caste_certificate"
-    ],
-    "apply_url": "https://pmvishwakarma.gov.in",
-    "apply_mode": [
-      "online",
-      "CSC"
-    ],
-    "description": "Support for 18 traditional artisan trades with toolkit grant, skill training and affordable credit at 5%.",
-    "description_hi": "18 पारंपरिक कारीगर व्यवसायों के लिए टूलकिट अनुदान, कौशल प्रशिक्षण और 5% पर ऋण।",
-    "description_mr": "18 पारंपरिक कारागीर व्यवसायांसाठी साधनसामग्री अनुदान, कौशल्य प्रशिक्षण आणि 5% दराने कर्ज.",
-    "tags": [
-      "artisan",
-      "craft",
-      "credit",
-      "central"
-    ],
-    "ministry": "Ministry of Micro, Small & Medium Enterprises",
-    "beneficiary_type": [
-      "artisan"
-    ],
-    "quota_filled_percent": 40,
-    "ineligibility_rules": {
-      "occupation": "Only traditional artisans in the 18 specified trades are eligible",
-      "government_employee": "Government employees are not eligible"
-    }
-  },
-  {
-    "id": "pm-mudra",
-    "name": "PM MUDRA Loan Yojana",
-    "name_hi": "पीएम मुद्रा ऋण योजना",
-    "name_mr": "पीएम मुद्रा कर्ज योजना",
-    "category": [
-      "finance",
-      "entrepreneurship"
-    ],
-    "benefit_amount": 1000000,
-    "benefit_type": "loan",
-    "benefit_frequency": "one_time",
-    "benefit_description": "Shishu: up to ₹50K | Kishore: ₹50K–5L | Tarun: ₹5L–10L — no collateral required",
-    "deadline": "2026-03-31",
-    "deadline_label": "Always open",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "artisan",
-        "self_employed",
-        "small_business"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [
-        "defaulter"
-      ],
-      "must_have_business": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "pan_card",
-      "bank_passbook",
-      "business_proof",
+      "land_record",
+      "bank_account",
       "passport_photo"
     ],
-    "apply_url": "https://www.mudra.org.in",
-    "apply_mode": [
-      "bank",
-      "online",
-      "MFI"
-    ],
-    "description": "Collateral-free micro business loans in 3 tiers for non-corporate, non-farm micro/small enterprises.",
-    "description_hi": "छोटे व्यवसायों के लिए बिना गारंटी के ₹10 लाख तक का ऋण — शिशु, किशोर और तरुण श्रेणियों में।",
-    "description_mr": "लहान उद्योगांसाठी बिना तारण ₹10 लाखापर्यंत कर्ज — शिशु, किशोर आणि तरुण श्रेणींमध्ये.",
-    "tags": [
-      "loan",
-      "entrepreneurship",
-      "central"
-    ],
-    "ministry": "Ministry of Finance",
-    "beneficiary_type": [
-      "artisan",
-      "self_employed"
-    ],
-    "quota_filled_percent": 65,
-    "ineligibility_rules": {
-      "must_have_business": "Must have or plan a non-farm business activity",
-      "defaulter": "Loan defaulters are not eligible"
-    }
-  },
-  {
-    "id": "sukanya-samridhi",
-    "name": "Sukanya Samridhi Yojana (SSY)",
-    "name_hi": "सुकन्या समृद्धि योजना",
-    "name_mr": "सुकन्या समृद्धी योजना",
-    "category": [
-      "women",
-      "children",
-      "savings"
-    ],
-    "benefit_amount": 0,
-    "benefit_type": "savings_interest",
-    "benefit_frequency": "annual",
-    "benefit_description": "8.2% annual interest on savings — highest government-backed rate. Tax-free maturity amount.",
-    "deadline": "2026-03-31",
-    "deadline_label": "Always open for girl children under 10",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 0,
-      "age_max": 100,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [],
-      "girl_child_age_max": 10,
-      "max_accounts_per_family": 2
-    },
-    "documents_required": [
-      "aadhaar",
-      "birth_certificate_girl",
-      "passport_photo",
-      "guardian_id"
-    ],
-    "apply_url": "https://www.indiapost.gov.in",
-    "apply_mode": [
-      "post_office",
-      "bank"
-    ],
-    "description": "Savings scheme for girl child with 8.2% interest rate. Account opens before age 10, matures at 21.",
-    "description_hi": "बेटी के भविष्य के लिए 8.2% ब्याज पर बचत योजना। 10 साल से पहले खाता खोलें।",
-    "description_mr": "मुलीच्या भविष्यासाठी 8.2% व्याजदराची बचत योजना. 10 वर्षापूर्वी खाते उघडा.",
-    "tags": [
-      "women",
-      "girl_child",
-      "savings",
-      "central"
-    ],
-    "ministry": "Ministry of Finance",
-    "beneficiary_type": [
-      "women",
-      "children"
-    ],
-    "quota_filled_percent": 55,
-    "ineligibility_rules": {
-      "girl_child_age_max": "Girl child must be under 10 years of age",
-      "max_accounts_per_family": "Maximum 2 accounts per family (for 2 girl children)"
-    }
-  },
-  {
-    "id": "nrlm-jeevika",
-    "name": "NRLM - Aajeevika / Deendayal Antyodaya Yojana",
-    "name_hi": "राष्ट्रीय ग्रामीण आजीविका मिशन",
-    "name_mr": "राष्ट्रीय ग्रामीण उपजीविका अभियान",
-    "category": [
-      "women",
-      "finance",
-      "livelihood"
-    ],
-    "benefit_amount": 15000,
-    "benefit_type": "SHG_credit",
-    "benefit_frequency": "revolving",
-    "benefit_description": "₹15000 revolving fund per SHG + ₹2.5L Community Investment Fund + subsidized bank credit linkage",
-    "deadline": "2026-03-31",
-    "deadline_label": "Ongoing SHG formation",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": 200000,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "female"
-      ],
-      "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [],
-      "must_be_rural": true,
-      "must_be_bpl_or_low_income": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "ration_card",
-      "income_certificate"
-    ],
-    "apply_url": "https://aajeevika.gov.in",
-    "apply_mode": [
-      "gram_panchayat",
-      "block_office"
-    ],
-    "description": "Women's Self Help Group formation with revolving funds, training and bank credit linkage for rural livelihoods.",
-    "description_hi": "ग्रामीण महिलाओं के लिए स्वयं सहायता समूह, बैंक ऋण और आजीविका सहायता।",
-    "description_mr": "ग्रामीण महिलांसाठी बचत गट, बँक कर्ज जोडणी आणि उपजीविका मदत.",
-    "tags": [
-      "women",
-      "SHG",
-      "credit",
-      "central"
-    ],
-    "ministry": "Ministry of Rural Development",
-    "beneficiary_type": [
-      "women"
-    ],
-    "quota_filled_percent": 62,
-    "ineligibility_rules": {
-      "gender": "Only women are eligible for this scheme",
-      "must_be_rural": "Only rural residents are eligible",
-      "must_be_bpl_or_low_income": "Must belong to BPL or low income household"
-    }
-  },
-  {
-    "id": "atal-pension",
-    "name": "Atal Pension Yojana (APY)",
-    "name_hi": "अटल पेंशन योजना",
-    "name_mr": "अटल पेंशन योजना",
-    "category": [
-      "finance",
-      "pension",
-      "social_security"
-    ],
-    "benefit_amount": 60000,
-    "benefit_type": "pension",
-    "benefit_frequency": "annual",
-    "benefit_description": "Guaranteed monthly pension of ₹1000–₹5000 after age 60, depending on contribution amount",
-    "deadline": "2026-03-31",
-    "deadline_label": "Always open",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 18,
-      "age_max": 40,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [
-        "income_tax_payer"
-      ],
-      "must_not_have_pension": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "mobile_number"
-    ],
-    "apply_url": "https://www.npscra.nsdl.co.in",
-    "apply_mode": [
-      "bank",
-      "post_office",
-      "online"
-    ],
-    "description": "Government-backed pension scheme for unorganized sector workers ensuring guaranteed retirement income.",
-    "description_hi": "असंगठित क्षेत्र के श्रमिकों के लिए सरकारी पेंशन योजना — 60 साल बाद ₹5000 तक मासिक पेंशन।",
-    "description_mr": "असंघटित क्षेत्रातील कामगारांसाठी सरकारी पेंशन योजना — वय 60 नंतर ₹5000 पर्यंत मासिक पेंशन.",
-    "tags": [
-      "pension",
-      "social_security",
-      "central"
-    ],
-    "ministry": "Ministry of Finance",
-    "beneficiary_type": [
-      "laborer",
-      "all_rural"
-    ],
-    "quota_filled_percent": 58,
-    "ineligibility_rules": {
-      "age_min": "Must be between 18–40 years to join",
-      "age_max": "Must join before age 40",
-      "income_tax_payer": "Income tax payers are not eligible"
-    }
+    "description": "Short-term revolving credit up to \u20b93L for crop production, post-harvest expenses, and farm maintenance at a 4% effective interest rate.",
+    "apply_url": "https://sbi.co.in/web/agri-rural/agriculture-banking/crop-loan/kisan-credit-card",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "pmksy",
     "name": "PM Krishi Sinchayee Yojana (PMKSY)",
-    "name_hi": "प्रधानमंत्री कृषि सिंचाई योजना",
-    "name_mr": "प्रधानमंत्री कृषी सिंचन योजना",
     "category": [
       "agriculture",
       "irrigation"
     ],
     "benefit_amount": 55000,
     "benefit_type": "subsidy",
-    "benefit_frequency": "one_time",
-    "benefit_description": "55% subsidy for small/marginal farmers on drip or sprinkler irrigation systems",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual budget-based",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": null,
+      "farmer_required": true,
+      "land_required": true,
       "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
+      "land_record",
+      "bank_account",
       "irrigation_plan"
     ],
-    "apply_url": "https://pmksy.gov.in",
-    "apply_mode": [
-      "online",
-      "agriculture_dept"
-    ],
-    "description": "Subsidized micro-irrigation infrastructure to improve water efficiency — 'More Crop Per Drop'.",
-    "description_hi": "ड्रिप और स्प्रिंकलर सिंचाई पर 55% सब्सिडी — 'हर खेत को पानी, अधिक फसल प्रति बूंद'।",
-    "description_mr": "ठिबक आणि तुषार सिंचनावर 55% सबसिडी — 'प्रत्येक शेताला पाणी, अधिक पीक प्रति थेंब'.",
-    "tags": [
-      "irrigation",
-      "agriculture",
-      "subsidy",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 52,
-    "ineligibility_rules": {
-      "occupation": "Only farmers with agricultural land are eligible"
-    }
+    "description": "Subsidized micro-irrigation infrastructure (drip and sprinkler systems) to improve water efficiency - 'More Crop Per Drop'.",
+    "apply_url": "https://pmksy.gov.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "soil-health-card",
     "name": "Soil Health Card Scheme",
-    "name_hi": "मृदा स्वास्थ्य कार्ड योजना",
-    "name_mr": "मृदा आरोग्य कार्ड योजना",
     "category": [
       "agriculture",
       "technology"
     ],
     "benefit_amount": 0,
     "benefit_type": "service",
-    "benefit_frequency": "biennial",
-    "benefit_description": "Free soil nutrient analysis every 2 years with fertilizer recommendations to reduce costs by 20-30%",
-    "deadline": "2026-03-31",
-    "deadline_label": "Ongoing",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": null,
+      "farmer_required": true,
+      "land_required": true,
       "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
+      "land_record",
       "mobile_number"
     ],
-    "apply_url": "https://soilhealth.dac.gov.in",
-    "apply_mode": [
-      "agriculture_dept",
-      "CSC"
-    ],
     "description": "Free soil testing and personalized fertilizer recommendations to optimize crop yield and reduce input costs.",
-    "description_hi": "मुफ्त मिट्टी परीक्षण और उर्वरक सिफारिश — फसल उत्पादन बढ़ाएं और लागत घटाएं।",
-    "description_mr": "मोफत माती परीक्षण आणि खत शिफारस — पीक उत्पन्न वाढवा आणि खर्च कमी करा.",
-    "tags": [
-      "agriculture",
-      "technology",
-      "free_service",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 75,
-    "ineligibility_rules": {
-      "occupation": "Only farmers with cultivable land are eligible"
-    }
-  },
-  {
-    "id": "nsp-scholarship",
-    "name": "National Scholarship Portal (NSP)",
-    "name_hi": "राष्ट्रीय छात्रवृत्ति पोर्टल",
-    "name_mr": "राष्ट्रीय शिष्यवृत्ती पोर्टल",
-    "category": [
-      "education",
-      "scholarship"
-    ],
-    "benefit_amount": 25000,
-    "benefit_type": "scholarship",
-    "benefit_frequency": "annual",
-    "benefit_description": "Merit/means-based scholarships ₹5000–₹25000/year for pre-matric, post-matric and top-class students",
-    "deadline": "2025-10-31",
-    "deadline_label": "Annual October deadline",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "student"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": 250000,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 10,
-      "age_max": 30,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [],
-      "must_be_studying": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "income_certificate",
-      "education_certificate",
-      "caste_certificate"
-    ],
-    "apply_url": "https://scholarships.gov.in",
-    "apply_mode": [
-      "online"
-    ],
-    "description": "Centralized portal for 40+ central and state scholarship schemes for students from Class 1 to PhD.",
-    "description_hi": "कक्षा 1 से पीएचडी तक के छात्रों के लिए 40+ छात्रवृत्ति योजनाओं का एकल पोर्टल।",
-    "description_mr": "इयत्ता 1 ते PhD पर्यंतच्या विद्यार्थ्यांसाठी 40+ शिष्यवृत्ती योजनांचे एकल पोर्टल.",
-    "tags": [
-      "scholarship",
-      "education",
-      "youth",
-      "central"
-    ],
-    "ministry": "Ministry of Education",
-    "beneficiary_type": [
-      "youth",
-      "student"
-    ],
-    "quota_filled_percent": 60,
-    "ineligibility_rules": {
-      "max_annual_income": "Family income must be below ₹2.5L for most scholarships",
-      "must_be_studying": "Must be currently enrolled in a recognized institution"
-    }
-  },
-  {
-    "id": "sc-st-scholarship",
-    "name": "Post Matric Scholarship for SC/ST Students",
-    "name_hi": "अनुसूचित जाति/जनजाति पोस्ट मैट्रिक छात्रवृत्ति",
-    "name_mr": "SC/ST विद्यार्थ्यांसाठी पोस्ट मॅट्रिक शिष्यवृत्ती",
-    "category": [
-      "education",
-      "scholarship",
-      "welfare"
-    ],
-    "benefit_amount": 50000,
-    "benefit_type": "scholarship",
-    "benefit_frequency": "annual",
-    "benefit_description": "Full tuition fee reimbursement + maintenance allowance ₹380–₹1200/month depending on course",
-    "deadline": "2025-10-31",
-    "deadline_label": "Annual October deadline",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "student"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": 250000,
-      "caste": [
-        "SC",
-        "ST"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 14,
-      "age_max": 35,
-      "must_have": [
-        "aadhaar",
-        "bank_account",
-        "caste_certificate"
-      ],
-      "disqualifiers": [],
-      "must_be_studying": true,
-      "minimum_class": "11"
-    },
-    "documents_required": [
-      "aadhaar",
-      "caste_certificate",
-      "bank_passbook",
-      "income_certificate",
-      "education_certificate",
-      "admission_letter"
-    ],
-    "apply_url": "https://scholarships.gov.in",
-    "apply_mode": [
-      "online"
-    ],
-    "description": "Full support scholarship for SC/ST students pursuing post-matric education covering fees and maintenance.",
-    "description_hi": "SC/ST छात्रों के लिए पूर्ण ट्यूशन फीस प्रतिपूर्ति और मासिक रखरखाव भत्ता।",
-    "description_mr": "SC/ST विद्यार्थ्यांसाठी पूर्ण शिक्षण शुल्क परतफेड आणि मासिक देखभाल भत्ता.",
-    "tags": [
-      "scholarship",
-      "SC/ST",
-      "education",
-      "central"
-    ],
-    "ministry": "Ministry of Social Justice & Empowerment",
-    "beneficiary_type": [
-      "youth",
-      "student"
-    ],
-    "quota_filled_percent": 55,
-    "ineligibility_rules": {
-      "caste": "Only SC/ST students are eligible",
-      "max_annual_income": "Family annual income must be below ₹2.5L"
-    }
-  },
-  {
-    "id": "obc-scholarship",
-    "name": "Post Matric Scholarship for OBC Students",
-    "name_hi": "ओबीसी छात्रों के लिए पोस्ट मैट्रिक छात्रवृत्ति",
-    "name_mr": "OBC विद्यार्थ्यांसाठी पोस्ट मॅट्रिक शिष्यवृत्ती",
-    "category": [
-      "education",
-      "scholarship",
-      "welfare"
-    ],
-    "benefit_amount": 35000,
-    "benefit_type": "scholarship",
-    "benefit_frequency": "annual",
-    "benefit_description": "Tuition fee reimbursement + maintenance allowance for OBC students in Class 11 and above",
-    "deadline": "2025-10-31",
-    "deadline_label": "Annual October deadline",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "student"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": 100000,
-      "caste": [
-        "OBC"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 14,
-      "age_max": 35,
-      "must_have": [
-        "aadhaar",
-        "bank_account",
-        "caste_certificate"
-      ],
-      "disqualifiers": [],
-      "must_be_studying": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "caste_certificate",
-      "bank_passbook",
-      "income_certificate",
-      "education_certificate"
-    ],
-    "apply_url": "https://scholarships.gov.in",
-    "apply_mode": [
-      "online"
-    ],
-    "description": "Post-matric scholarship for OBC students to ensure higher education access for backward communities.",
-    "description_hi": "OBC छात्रों के लिए उच्च शिक्षा हेतु ट्यूशन फीस प्रतिपूर्ति और मासिक भत्ता।",
-    "description_mr": "OBC विद्यार्थ्यांसाठी उच्च शिक्षण शुल्क परतफेड आणि मासिक भत्ता.",
-    "tags": [
-      "scholarship",
-      "OBC",
-      "education",
-      "central"
-    ],
-    "ministry": "Ministry of Social Justice & Empowerment",
-    "beneficiary_type": [
-      "youth",
-      "student"
-    ],
-    "quota_filled_percent": 50,
-    "ineligibility_rules": {
-      "caste": "Only OBC students are eligible",
-      "max_annual_income": "Family annual income must be below ₹1L"
-    }
-  },
-  {
-    "id": "pmsvanidhi",
-    "name": "PM SVANidhi - Street Vendor Loan",
-    "name_hi": "पीएम स्वनिधि योजना",
-    "name_mr": "पीएम स्वनिधी योजना",
-    "category": [
-      "finance",
-      "entrepreneurship",
-      "livelihood"
-    ],
-    "benefit_amount": 50000,
-    "benefit_type": "loan",
-    "benefit_frequency": "progressive",
-    "benefit_description": "₹10K → ₹20K → ₹50K progressive loans at 7% interest with cashback on digital payments",
-    "deadline": "2030-03-31",
-    "deadline_label": "Open until 2030",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "street_vendor",
-        "self_employed"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [],
-      "must_be_vendor": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "vendor_certificate",
-      "passport_photo"
-    ],
-    "apply_url": "https://pmsvanidhi.mohua.gov.in",
-    "apply_mode": [
-      "online",
-      "lending_institution"
-    ],
-    "description": "Micro-credit and digital onboarding for street vendors displaced by COVID-19 lockdowns.",
-    "description_hi": "रेहड़ी-पटरी विक्रेताओं के लिए ₹50K तक का ऋण और डिजिटल भुगतान पर कैशबैक।",
-    "description_mr": "रस्त्यावरील विक्रेत्यांसाठी ₹50K पर्यंत कर्ज आणि डिजिटल पेमेंटवर कॅशबॅक.",
-    "tags": [
-      "loan",
-      "vendor",
-      "street",
-      "central"
-    ],
-    "ministry": "Ministry of Housing & Urban Affairs",
-    "beneficiary_type": [
-      "self_employed",
-      "artisan"
-    ],
-    "quota_filled_percent": 45,
-    "ineligibility_rules": {
-      "must_be_vendor": "Must be a street vendor with vending certificate or letter of recommendation"
-    }
+    "apply_url": "https://soilhealth.dac.gov.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "pkvy",
     "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
-    "name_hi": "परंपरागत कृषि विकास योजना",
-    "name_mr": "परंपरागत कृषी विकास योजना",
     "category": [
       "agriculture",
       "organic"
     ],
     "benefit_amount": 50000,
     "benefit_type": "subsidy",
-    "benefit_frequency": "over_3_years",
-    "benefit_description": "₹50000/ha over 3 years for organic inputs, certification, packaging and marketing support",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual cluster formation",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": 12.4,
+      "farmer_required": true,
+      "land_required": true,
       "min_land_acres": 0.5,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "max_land_acres": 12.4,
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [],
-      "must_form_cluster": true
+      "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
+      "land_record",
+      "bank_account",
       "cluster_registration"
     ],
-    "apply_url": "https://pgsindia-ncof.gov.in",
-    "apply_mode": [
-      "agriculture_dept"
-    ],
-    "description": "Financial support to farmer clusters for conversion to organic farming with certification and marketing.",
-    "description_hi": "किसान समूहों को जैविक खेती अपनाने के लिए ₹50000/हेक्टेयर सहायता और जैविक प्रमाणन।",
-    "description_mr": "शेतकरी गटांना सेंद्रिय शेतीसाठी ₹50000/हेक्टर मदत आणि सेंद्रिय प्रमाणन.",
-    "tags": [
-      "organic",
-      "agriculture",
-      "subsidy",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 35,
-    "ineligibility_rules": {
-      "occupation": "Only farmers are eligible",
-      "must_form_cluster": "Must be part of a 50-acre organic cluster"
-    }
+    "description": "Financial support to farmer clusters for conversion to organic farming, including certification, packaging and marketing support over 3 years.",
+    "apply_url": "https://pgsindia-ncof.gov.in/pkvy/index.aspx",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "enam",
     "name": "e-NAM (National Agriculture Market)",
-    "name_hi": "राष्ट्रीय कृषि बाजार",
-    "name_mr": "राष्ट्रीय कृषी बाजार",
     "category": [
       "agriculture",
       "market"
     ],
     "benefit_amount": 0,
     "benefit_type": "service",
-    "benefit_frequency": "ongoing",
-    "benefit_description": "Online mandi access — sell produce at better prices, reduce middlemen, transparent bidding",
-    "deadline": "2026-03-31",
-    "deadline_label": "Ongoing registration",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": null,
+      "farmer_required": true,
+      "land_required": true,
       "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "crop_required": true,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "bank_passbook",
-      "land_record_7_12"
+      "bank_account",
+      "land_record"
     ],
-    "apply_url": "https://enam.gov.in",
-    "apply_mode": [
-      "online",
-      "mandi"
-    ],
-    "description": "Online platform connecting farmers directly to buyers across India for transparent price discovery.",
-    "description_hi": "किसानों को देश भर के खरीदारों से सीधे जोड़ने वाला ऑनलाइन मंडी प्लेटफॉर्म।",
-    "description_mr": "शेतकऱ्यांना देशभरातील खरेदीदारांशी थेट जोडणारे ऑनलाइन बाजार व्यासपीठ.",
-    "tags": [
-      "market",
-      "agriculture",
-      "digital",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 40,
-    "ineligibility_rules": {
-      "occupation": "Only farmers with agricultural produce are eligible"
-    }
+    "description": "Online platform connecting farmers directly to buyers across India for transparent price discovery and better produce pricing.",
+    "apply_url": "https://enam.gov.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "smam",
     "name": "SMAM - Farm Machinery Subsidy",
-    "name_hi": "कृषि यंत्रीकरण पर उप-मिशन",
-    "name_mr": "कृषी यांत्रिकीकरण उप-अभियान",
     "category": [
       "agriculture",
       "technology"
     ],
     "benefit_amount": 100000,
     "benefit_type": "subsidy",
-    "benefit_frequency": "one_time",
-    "benefit_description": "40–50% subsidy on agricultural machinery and equipment including tractors, harvesters, threshers",
-    "deadline": "2026-03-31",
-    "deadline_label": "Budget-based annual",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": 12.4,
+      "farmer_required": true,
+      "land_required": true,
       "min_land_acres": 0.5,
-      "max_annual_income": null,
-      "caste": [
-        "SC",
-        "ST",
-        "OBC",
-        "General"
-      ],
-      "gender": [
-        "all"
-      ],
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
+      "land_record",
+      "bank_account",
       "quotation_machinery"
     ],
-    "apply_url": "https://agrimachinery.nic.in",
-    "apply_mode": [
-      "online",
-      "agriculture_dept"
-    ],
-    "description": "Subsidy on purchase of modern farm machinery to reduce labor costs and improve productivity.",
-    "description_hi": "आधुनिक कृषि यंत्रों की खरीद पर 50% तक सब्सिडी — श्रम लागत कम करें, उत्पादकता बढ़ाएं।",
-    "description_mr": "आधुनिक शेती यंत्रांच्या खरेदीवर 50% पर्यंत सबसिडी — मजुरी खर्च कमी, उत्पादकता वाढ.",
-    "tags": [
-      "machinery",
-      "technology",
-      "agriculture",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 48,
-    "ineligibility_rules": {
-      "occupation": "Only farmers are eligible"
-    }
-  },
-  {
-    "id": "janani-suraksha",
-    "name": "Janani Suraksha Yojana (JSY)",
-    "name_hi": "जननी सुरक्षा योजना",
-    "name_mr": "जननी सुरक्षा योजना",
-    "category": [
-      "women",
-      "health"
-    ],
-    "benefit_amount": 1400,
-    "benefit_type": "cash_incentive",
-    "benefit_frequency": "per_birth",
-    "benefit_description": "₹1400 cash for rural women on institutional delivery + free antenatal checkups",
-    "deadline": "2026-03-31",
-    "deadline_label": "Ongoing",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "female"
-      ],
-      "age_min": 19,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [],
-      "must_be_pregnant": true,
-      "must_be_rural": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "antenatal_card",
-      "bpl_card"
-    ],
-    "apply_url": "https://nhm.gov.in",
-    "apply_mode": [
-      "government_hospital",
-      "health_center"
-    ],
-    "description": "Cash incentive for BPL/SC/ST pregnant women to promote safe institutional delivery in hospitals.",
-    "description_hi": "गरीब गर्भवती महिलाओं को अस्पताल में प्रसव पर ₹1400 नकद प्रोत्साहन और मुफ्त जांच।",
-    "description_mr": "गरीब गर्भवती महिलांना रुग्णालयात प्रसवासाठी ₹1400 रोख प्रोत्साहन आणि मोफत तपासणी.",
-    "tags": [
-      "health",
-      "women",
-      "maternity",
-      "central"
-    ],
-    "ministry": "Ministry of Health & Family Welfare",
-    "beneficiary_type": [
-      "women"
-    ],
-    "quota_filled_percent": 70,
-    "ineligibility_rules": {
-      "gender": "Only pregnant women are eligible",
-      "must_be_rural": "Primarily targeted at rural areas"
-    }
-  },
-  {
-    "id": "pmgkay",
-    "name": "PM Garib Kalyan Anna Yojana (PMGKAY)",
-    "name_hi": "प्रधानमंत्री गरीब कल्याण अन्न योजना",
-    "name_mr": "प्रधानमंत्री गरीब कल्याण अन्न योजना",
-    "category": [
-      "welfare",
-      "food_security"
-    ],
-    "benefit_amount": 6000,
-    "benefit_type": "food_grain",
-    "benefit_frequency": "annual",
-    "benefit_description": "5 kg free food grain per person per month — rice, wheat or millets. Worth ~₹500/month per person.",
-    "deadline": "2028-12-31",
-    "deadline_label": "Extended to 2028",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 0,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "ration_card"
-      ],
-      "disqualifiers": [],
-      "must_have_ration_card": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "ration_card"
-    ],
-    "apply_url": "https://dfpd.gov.in",
-    "apply_mode": [
-      "ration_shop"
-    ],
-    "description": "Free 5 kg food grain monthly for every person with Priority Household or Antyodaya Anna Yojana ration card.",
-    "description_hi": "राशन कार्ड धारकों को प्रति व्यक्ति 5 किग्रा मुफ्त खाद्यान्न हर महीने — 2028 तक।",
-    "description_mr": "रेशन कार्ड धारकांना दरमहा प्रति व्यक्ती 5 किलो मोफत अन्नधान्य — 2028 पर्यंत.",
-    "tags": [
-      "food",
-      "welfare",
-      "central",
-      "bpl"
-    ],
-    "ministry": "Ministry of Consumer Affairs, Food & Public Distribution",
-    "beneficiary_type": [
-      "all_rural",
-      "bpl"
-    ],
-    "quota_filled_percent": 95,
-    "ineligibility_rules": {
-      "must_have_ration_card": "Must hold a valid PHH or AAY ration card"
-    }
-  },
-  {
-    "id": "beti-bachao",
-    "name": "Beti Bachao Beti Padhao (BBBP)",
-    "name_hi": "बेटी बचाओ बेटी पढ़ाओ",
-    "name_mr": "बेटी बचाओ बेटी पढाओ",
-    "category": [
-      "women",
-      "children",
-      "education"
-    ],
-    "benefit_amount": 0,
-    "benefit_type": "awareness_plus_savings",
-    "benefit_frequency": "ongoing",
-    "benefit_description": "Linked with Sukanya Samridhi — ₹8.2% interest savings + school incentives for girl children",
-    "deadline": "2026-03-31",
-    "deadline_label": "Ongoing",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 0,
-      "age_max": 100,
-      "must_have": [
-        "aadhaar"
-      ],
-      "disqualifiers": [],
-      "must_have_girl_child": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "birth_certificate_girl",
-      "passport_photo"
-    ],
-    "apply_url": "https://wcd.nic.in",
-    "apply_mode": [
-      "anganwadi",
-      "school",
-      "online"
-    ],
-    "description": "National campaign for survival, protection and education of girl children with linked savings scheme.",
-    "description_hi": "बालिकाओं के संरक्षण, शिक्षा और सशक्तीकरण के लिए राष्ट्रीय अभियान।",
-    "description_mr": "मुलींच्या संरक्षण, शिक्षण आणि सक्षमीकरणासाठी राष्ट्रीय मोहीम.",
-    "tags": [
-      "girl_child",
-      "education",
-      "women",
-      "central"
-    ],
-    "ministry": "Ministry of Women & Child Development",
-    "beneficiary_type": [
-      "women",
-      "children"
-    ],
-    "quota_filled_percent": 65,
-    "ineligibility_rules": {
-      "must_have_girl_child": "Must have a girl child in the family"
-    }
-  },
-  {
-    "id": "pm-jan-dhan",
-    "name": "PM Jan Dhan Yojana (PMJDY)",
-    "name_hi": "प्रधानमंत्री जन धन योजना",
-    "name_mr": "प्रधानमंत्री जन धन योजना",
-    "category": [
-      "finance",
-      "banking"
-    ],
-    "benefit_amount": 30000,
-    "benefit_type": "account_benefits",
-    "benefit_frequency": "annual",
-    "benefit_description": "Zero-balance bank account + ₹1L accident insurance + ₹30K life cover + ₹10K overdraft facility",
-    "deadline": "2026-03-31",
-    "deadline_label": "Always open",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 10,
-      "age_max": null,
-      "must_have": [
-        "aadhaar"
-      ],
-      "disqualifiers": [],
-      "no_existing_bank_account": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "passport_photo"
-    ],
-    "apply_url": "https://pmjdy.gov.in",
-    "apply_mode": [
-      "bank",
-      "CSC"
-    ],
-    "description": "Zero-balance savings account with RuPay debit card, accident insurance and overdraft facility for unbanked.",
-    "description_hi": "बैंक खाते से वंचित लोगों के लिए जीरो-बैलेंस खाता + ₹1L दुर्घटना बीमा और ₹30K जीवन बीमा।",
-    "description_mr": "बँक खाते नसलेल्यांसाठी जीरो-बॅलेन्स खाते + ₹1L अपघात विमा आणि ₹30K जीवन विमा.",
-    "tags": [
-      "banking",
-      "finance",
-      "inclusion",
-      "central"
-    ],
-    "ministry": "Ministry of Finance",
-    "beneficiary_type": [
-      "all_rural"
-    ],
-    "quota_filled_percent": 90,
-    "ineligibility_rules": {
-      "no_existing_bank_account": "Must not already have a bank account at any bank"
-    }
+    "description": "40-50% subsidy on purchase of modern farm machinery (tractors, harvesters, threshers) to reduce labor costs and improve productivity.",
+    "apply_url": "https://agrimachinery.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "pm-kusum",
-    "name": "PM-KUSUM Solar Pump Scheme",
-    "name_hi": "पीएम-कुसुम सौर पंप योजना",
-    "name_mr": "पीएम-कुसुम सौर पंप योजना",
+    "name": "PM KUSUM Yojana",
     "category": [
       "agriculture",
-      "energy",
-      "technology"
+      "energy"
     ],
-    "benefit_amount": 80000,
+    "benefit_amount": 350000,
     "benefit_type": "subsidy",
-    "benefit_frequency": "one_time",
-    "benefit_description": "90% subsidy on solar water pumps (central 30% + state 30% + farmer pays 10%). Save up to 80% electricity bills.",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual target-based",
     "states": [
       "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": 0.5,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 1.0,
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
+      "land_record",
+      "bank_account",
       "electricity_bill"
     ],
-    "apply_url": "https://pmkusum.mnre.gov.in",
-    "apply_mode": [
-      "online",
-      "agriculture_dept",
-      "discom"
-    ],
-    "description": "Solar pump installation on farmland with 90% government subsidy — saves electricity costs and ensures irrigation.",
-    "description_hi": "खेत में सोलर पंप पर 90% सब्सिडी — बिजली बिल में 80% बचत और सुनिश्चित सिंचाई।",
-    "description_mr": "शेतात सोलर पंपवर 90% सबसिडी — वीज बिलात 80% बचत.",
-    "tags": [
-      "solar",
-      "energy",
-      "agriculture",
-      "central"
-    ],
-    "ministry": "Ministry of New & Renewable Energy",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 30,
-    "ineligibility_rules": {
-      "occupation": "Only farmers with agricultural land are eligible"
-    }
-  },
-  {
-    "id": "namo-drone-didi",
-    "name": "Namo Drone Didi Scheme",
-    "name_hi": "नमो ड्रोन दीदी योजना",
-    "name_mr": "नमो ड्रोन दीदी योजना",
-    "category": [
-      "women",
-      "agriculture",
-      "technology"
-    ],
-    "benefit_amount": 800000,
-    "benefit_type": "equipment_grant",
-    "benefit_frequency": "one_time",
-    "benefit_description": "Up to 80% grant (₹8L max) for drones to Women SHGs for providing drone rental services to farmers",
-    "deadline": "2026-03-31",
-    "deadline_label": "2024-25 to 2025-26 scheme",
-    "states": [
-      "all"
-    ],
-    "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "female"
-      ],
-      "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [],
-      "must_be_shg_member": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "bank_passbook",
-      "shg_registration",
-      "passport_photo"
-    ],
-    "apply_url": "https://agriwelfare.gov.in",
-    "apply_mode": [
-      "agriculture_dept",
-      "block_office"
-    ],
-    "description": "Agricultural drones given to Women SHGs at 80% subsidy for providing paid drone services to farmers.",
-    "description_hi": "महिला स्वयं सहायता समूहों को कृषि ड्रोन पर 80% अनुदान — किसानों को ड्रोन किराए पर देकर आय।",
-    "description_mr": "महिला बचत गटांना कृषी ड्रोनवर 80% अनुदान — शेतकऱ्यांना ड्रोन सेवा देऊन उत्पन्न.",
-    "tags": [
-      "women",
-      "technology",
-      "agriculture",
-      "drone",
-      "central"
-    ],
-    "ministry": "Ministry of Agriculture & Farmers Welfare",
-    "beneficiary_type": [
-      "women"
-    ],
-    "quota_filled_percent": 20,
-    "ineligibility_rules": {
-      "gender": "Only women SHG members are eligible",
-      "must_be_shg_member": "Must be an active member of a registered Women Self Help Group"
-    }
+    "description": "Component B provides a 60% subsidy for installing standalone solar agriculture pumps to ensure reliable daytime irrigation.",
+    "apply_url": "https://pmkusum.mnre.gov.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
     "id": "namo-shetkari",
-    "name": "Namo Shetkari Maha Samman Nidhi (Maharashtra)",
-    "name_hi": "नमो शेतकरी महा सम्मान निधि",
-    "name_mr": "नमो शेतकरी महा सन्मान निधी",
+    "name": "Namo Shetkari Maha Samman Nidhi",
     "category": [
       "agriculture",
       "income_support"
     ],
     "benefit_amount": 6000,
     "benefit_type": "cash",
-    "benefit_frequency": "annual",
-    "benefit_description": "Additional ₹6000/year (state top-up over PM-KISAN) for Maharashtra farmers — total ₹12000 with PM-KISAN",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual registration",
     "states": [
       "Maharashtra"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": 12.4,
+      "farmer_required": true,
+      "land_required": true,
       "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": [
-        "government_employee",
         "income_tax_payer"
-      ],
-      "must_be_pm_kisan_beneficiary": true
+      ]
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
+      "land_record",
+      "bank_account",
       "pm_kisan_registration"
     ],
-    "apply_url": "https://mahadbt.maharashtra.gov.in",
-    "apply_mode": [
-      "online",
-      "CSC"
-    ],
-    "description": "Maharashtra state's additional ₹6000/year income support for farmers who are PM-KISAN beneficiaries.",
-    "description_hi": "महाराष्ट्र के पीएम-किसान लाभार्थियों को अतिरिक्त ₹6000/वर्ष राज्य सहायता।",
-    "description_mr": "महाराष्ट्रातील पीएम-किसान लाभार्थ्यांना अतिरिक्त ₹6000/वर्ष राज्य मदत.",
-    "tags": [
-      "income",
-      "agriculture",
-      "maharashtra",
-      "state"
-    ],
-    "ministry": "Maharashtra Agriculture Department",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 65,
-    "ineligibility_rules": {
-      "states": "Only Maharashtra farmers are eligible",
-      "must_be_pm_kisan_beneficiary": "Must already be a PM-KISAN beneficiary",
-      "disqualifiers": "Government employees and income tax payers not eligible"
-    }
+    "description": "Maharashtra state scheme providing an additional \u20b96000/year to all PM-KISAN beneficiary farmers in the state.",
+    "apply_url": "https://nsnmy.mahait.org/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
-    "id": "mahatma-phule-karjamukti",
-    "name": "Mahatma Phule Shetkari Karjamukti Yojana (Maharashtra)",
-    "name_hi": "महात्मा फुले शेतकरी कर्जमुक्ती योजना",
-    "name_mr": "महात्मा फुले शेतकरी कर्जमुक्ती योजना",
+    "id": "aif",
+    "name": "Agriculture Infrastructure Fund (AIF)",
     "category": [
       "agriculture",
-      "finance",
-      "debt_relief"
+      "infrastructure"
     ],
-    "benefit_amount": 200000,
-    "benefit_type": "debt_waiver",
-    "benefit_frequency": "one_time",
-    "benefit_description": "Up to ₹2 lakh agricultural loan waiver for eligible farmers in Maharashtra",
-    "deadline": "2026-03-31",
-    "deadline_label": "Ongoing — check eligibility",
+    "benefit_amount": 20000000,
+    "benefit_type": "credit",
     "states": [
-      "Maharashtra"
+      "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": 12.4,
-      "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "farmer_required": true,
+      "land_required": false,
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
-      "disqualifiers": [
-        "government_employee",
-        "income_tax_payer"
-      ],
-      "must_have_farm_loan": true
-    },
-    "documents_required": [
-      "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
-      "loan_documents",
-      "income_certificate"
-    ],
-    "apply_url": "https://mahadbt.maharashtra.gov.in",
-    "apply_mode": [
-      "online",
-      "bank"
-    ],
-    "description": "Loan waiver scheme for Maharashtra farmers with outstanding agricultural loans up to ₹2 lakh.",
-    "description_hi": "महाराष्ट्र के किसानों की ₹2 लाख तक की कृषि ऋण माफी।",
-    "description_mr": "महाराष्ट्रातील शेतकऱ्यांची ₹2 लाखापर्यंत शेती कर्जमाफी.",
-    "tags": [
-      "debt_waiver",
-      "agriculture",
-      "maharashtra",
-      "state"
-    ],
-    "ministry": "Maharashtra Finance Department",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 72,
-    "ineligibility_rules": {
-      "states": "Only Maharashtra farmers are eligible",
-      "must_have_farm_loan": "Must have outstanding agricultural loan from a bank",
-      "disqualifiers": "Government employees and income tax payers not eligible"
-    }
-  },
-  {
-    "id": "gopinath-munde-insurance",
-    "name": "Gopinath Munde Shetkari Accident Insurance (Maharashtra)",
-    "name_hi": "गोपीनाथ मुंडे शेतकरी अपघात विमा योजना",
-    "name_mr": "गोपीनाथ मुंडे शेतकरी अपघात विमा योजना",
-    "category": [
-      "agriculture",
-      "insurance"
-    ],
-    "benefit_amount": 200000,
-    "benefit_type": "insurance",
-    "benefit_frequency": "per_claim",
-    "benefit_description": "₹2L accident cover for farmers aged 10–75; ₹1L for partial disability. Premium paid by Maharashtra govt.",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual renewal by state",
-    "states": [
-      "Maharashtra"
-    ],
-    "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
-      "age_min": 10,
-      "age_max": 75,
-      "must_have": [
-        "land_record",
-        "aadhaar"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "passport_photo",
-      "bank_passbook"
+      "bank_account",
+      "business_proof",
+      "site_plan"
     ],
-    "apply_url": "https://mahadbt.maharashtra.gov.in",
-    "apply_mode": [
-      "online",
-      "gram_panchayat"
-    ],
-    "description": "Government-paid accident insurance of ₹2L for all Maharashtra farmers. No premium from farmer.",
-    "description_hi": "महाराष्ट्र सरकार द्वारा सभी किसानों के लिए मुफ्त ₹2 लाख दुर्घटना बीमा।",
-    "description_mr": "महाराष्ट्र सरकारद्वारे सर्व शेतकऱ्यांसाठी मोफत ₹2 लाख अपघात विमा.",
-    "tags": [
-      "insurance",
-      "accident",
-      "maharashtra",
-      "state"
-    ],
-    "ministry": "Maharashtra Agriculture Department",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 80,
-    "ineligibility_rules": {
-      "states": "Only Maharashtra farmers are eligible",
-      "age_max": "Farmer must be between 10–75 years"
-    }
+    "description": "Financing facility of \u20b91 Lakh Crore offering 3% interest subvention and credit guarantee for post-harvest management infrastructure.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
-    "id": "ramai-awas",
-    "name": "Ramai Awas Gharkul Yojana (Maharashtra)",
-    "name_hi": "रमाई आवास घरकुल योजना",
-    "name_mr": "रमाई आवास घरकुल योजना",
+    "id": "rkvy",
+    "name": "Rashtriya Krishi Vikas Yojana (RKVY)",
     "category": [
-      "housing",
-      "welfare"
+      "agriculture",
+      "development"
     ],
-    "benefit_amount": 150000,
+    "benefit_amount": 500000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.5,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account"
+    ],
+    "description": "State-specific decentralized agriculture project funding to maximize farmer returns in agriculture and allied sectors.",
+    "apply_url": "https://rkvy.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "nmsa",
+    "name": "National Mission on Sustainable Agriculture (NMSA)",
+    "category": [
+      "agriculture",
+      "sustainability"
+    ],
+    "benefit_amount": 20000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.5,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account"
+    ],
+    "description": "Promotes climate-resilient farming systems, soil health management, and synergistic farming models.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "fpo-formation",
+    "name": "Formation and Promotion of 10,000 FPOs",
+    "category": [
+      "agriculture",
+      "business"
+    ],
+    "benefit_amount": 1500000,
     "benefit_type": "grant",
-    "benefit_frequency": "one_time",
-    "benefit_description": "₹1.5L housing grant for SC/NT/OBC homeless families in Maharashtra for pucca house construction",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual application",
     "states": [
-      "Maharashtra"
+      "all"
     ],
     "eligibility": {
-      "occupation": [
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": 100000,
-      "caste": [
-        "SC",
-        "OBC",
-        "NT"
-      ],
-      "gender": [
-        "all"
-      ],
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.1,
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar",
-        "bank_account",
-        "caste_certificate"
-      ],
-      "disqualifiers": [
-        "government_employee",
-        "income_tax_payer"
-      ],
-      "must_be_houseless": true
+      "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "caste_certificate",
-      "bank_passbook",
-      "income_certificate",
-      "no_house_certificate"
+      "bank_account",
+      "business_proof",
+      "cluster_registration"
     ],
-    "apply_url": "https://mahadbt.maharashtra.gov.in",
-    "apply_mode": [
-      "online",
-      "gram_panchayat"
-    ],
-    "description": "Housing grant for SC/NT/OBC homeless families in Maharashtra to build a pucca house.",
-    "description_hi": "महाराष्ट्र में SC/NT/OBC बेघर परिवारों को पक्का घर बनाने के लिए ₹1.5 लाख अनुदान।",
-    "description_mr": "महाराष्ट्रातील SC/NT/OBC बेघर कुटुंबांना पक्के घर बांधण्यासाठी ₹1.5 लाख अनुदान.",
-    "tags": [
-      "housing",
-      "SC/ST",
-      "maharashtra",
-      "state"
-    ],
-    "ministry": "Maharashtra Social Justice Department",
-    "beneficiary_type": [
-      "all_rural"
-    ],
-    "quota_filled_percent": 68,
-    "ineligibility_rules": {
-      "states": "Only Maharashtra residents are eligible",
-      "caste": "Only SC/NT/OBC families are eligible",
-      "must_be_houseless": "Must not own any pucca house"
-    }
+    "description": "Equity grant up to \u20b915 Lakh per FPO and credit guarantee up to \u20b92 Crore to enhance farmer collective bargaining power.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
-    "id": "jalyukt-shivar",
-    "name": "Jalyukt Shivar Abhiyan (Maharashtra)",
-    "name_hi": "जलयुक्त शिवार अभियान",
-    "name_mr": "जलयुक्त शिवार अभियान",
+    "id": "nfsm",
+    "name": "National Food Security Mission (NFSM)",
     "category": [
       "agriculture",
-      "water",
-      "infrastructure"
+      "seeds"
     ],
-    "benefit_amount": 0,
-    "benefit_type": "community_asset",
-    "benefit_frequency": "one_time",
-    "benefit_description": "Free water conservation structures (deepening tanks, nalla bunding, check dams) for drought-prone villages",
-    "deadline": "2026-03-31",
-    "deadline_label": "Village-based annual plan",
+    "benefit_amount": 15000,
+    "benefit_type": "subsidy",
     "states": [
-      "Maharashtra"
+      "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer",
-        "all"
-      ],
-      "max_land_acres": null,
-      "min_land_acres": null,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.5,
+      "crop_required": true,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "aadhaar"
-      ],
-      "disqualifiers": [],
-      "must_be_drought_prone_village": true
+      "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "gram_panchayat_resolution"
+      "land_record",
+      "bank_account",
+      "sowing_certificate"
     ],
-    "apply_url": "https://mahawrd.org",
-    "apply_mode": [
-      "gram_panchayat"
-    ],
-    "description": "Making drought-prone Maharashtra villages water-sufficient through free water conservation structures.",
-    "description_hi": "महाराष्ट्र के सूखाग्रस्त गांवों को जलयुक्त बनाने के लिए मुफ्त जल संरक्षण संरचनाएं।",
-    "description_mr": "महाराष्ट्रातील दुष्काळग्रस्त गावांना जलपरिपूर्ण करण्यासाठी मोफत जलसंधारण संरचना.",
-    "tags": [
-      "water",
-      "irrigation",
-      "maharashtra",
-      "state",
-      "community"
-    ],
-    "ministry": "Maharashtra Water Resources Department",
-    "beneficiary_type": [
-      "farmer",
-      "all_rural"
-    ],
-    "quota_filled_percent": 60,
-    "ineligibility_rules": {
-      "states": "Only Maharashtra villages are eligible",
-      "must_be_drought_prone_village": "Village must be declared drought-prone"
-    }
+    "description": "Focuses on increasing the production of rice, wheat, pulses, coarse cereals, and commercial crops through area expansion and productivity enhancement.",
+    "apply_url": "https://nfsm.gov.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
-    "id": "anudanit-beej",
-    "name": "Anudanit Beej Vitran Yojana (Maharashtra)",
-    "name_hi": "अनुदानित बीज वितरण योजना",
-    "name_mr": "अनुदानित बीज वितरण योजना",
+    "id": "smsp",
+    "name": "Sub-Mission on Seeds and Planting Material (SMSP)",
     "category": [
       "agriculture",
-      "inputs"
+      "seeds"
     ],
     "benefit_amount": 5000,
     "benefit_type": "subsidy",
-    "benefit_frequency": "annual",
-    "benefit_description": "50% subsidy on certified high-yield seeds for Kharif and Rabi crops in Maharashtra",
-    "deadline": "2025-06-30",
-    "deadline_label": "Pre-Kharif season",
     "states": [
-      "Maharashtra"
+      "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": 12.4,
-      "min_land_acres": 0.1,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.5,
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "passport_photo"
+      "land_record",
+      "bank_account"
     ],
-    "apply_url": "https://mahadbt.maharashtra.gov.in",
-    "apply_mode": [
-      "agriculture_dept",
-      "krishi_kendra"
-    ],
-    "description": "Maharashtra provides certified seeds at 50% subsidized cost to farmers before each sowing season.",
-    "description_hi": "महाराष्ट्र में किसानों को खरीफ और रबी के लिए प्रमाणित बीज 50% सब्सिडी पर।",
-    "description_mr": "महाराष्ट्रात शेतकऱ्यांना खरीप व रब्बीसाठी प्रमाणित बियाणे 50% सबसिडीवर.",
-    "tags": [
-      "seeds",
-      "subsidy",
-      "agriculture",
-      "maharashtra",
-      "state"
-    ],
-    "ministry": "Maharashtra Agriculture Department",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 55,
-    "ineligibility_rules": {
-      "states": "Only Maharashtra farmers are eligible",
-      "occupation": "Only farmers are eligible"
-    }
+    "description": "Provides certified seeds to farmers at subsidized rates to ensure access to quality planting material.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
-    "id": "shet-tale",
-    "name": "Magel Tyala Shet Tale (Farm Pond) - Maharashtra",
-    "name_hi": "मागेल त्याला शेत तळे",
-    "name_mr": "मागेल त्याला शेत तळे",
+    "id": "nlm",
+    "name": "National Livestock Mission (NLM)",
     "category": [
       "agriculture",
-      "water",
-      "infrastructure"
+      "livestock"
     ],
-    "benefit_amount": 75000,
+    "benefit_amount": 5000000,
     "benefit_type": "subsidy",
-    "benefit_frequency": "one_time",
-    "benefit_description": "Up to ₹75000 subsidy for farm pond construction on farmer's land for water conservation and irrigation",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual budget allocation",
     "states": [
-      "Maharashtra"
+      "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": 12.4,
-      "min_land_acres": 0.6,
-      "max_annual_income": null,
-      "caste": [
-        "all"
-      ],
-      "gender": [
-        "all"
-      ],
+      "farmer_required": true,
+      "land_required": false,
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "bank_passbook",
-      "site_plan"
+      "bank_account",
+      "business_proof"
     ],
-    "apply_url": "https://mahadbt.maharashtra.gov.in",
-    "apply_mode": [
-      "agriculture_dept",
-      "online"
-    ],
-    "description": "On-demand farm pond construction subsidy for Maharashtra farmers to store rainwater for irrigation.",
-    "description_hi": "महाराष्ट्र के किसानों को खेत तालाब निर्माण पर ₹75000 तक की सब्सिडी — वर्षा जल संग्रहण के लिए।",
-    "description_mr": "महाराष्ट्रातील शेतकऱ्यांना शेत तळे बांधण्यासाठी ₹75000 पर्यंत सबसिडी.",
-    "tags": [
-      "farm_pond",
-      "water",
-      "agriculture",
-      "maharashtra",
-      "state"
-    ],
-    "ministry": "Maharashtra Agriculture Department",
-    "beneficiary_type": [
-      "farmer"
-    ],
-    "quota_filled_percent": 50,
-    "ineligibility_rules": {
-      "states": "Only Maharashtra farmers are eligible",
-      "min_land_acres": "Must have at least 0.6 acres (0.25 hectare) of land"
-    }
+    "description": "50% capital subsidy (up to \u20b950 Lakh) for establishing rural poultry, sheep, goat, and piggery breeding farms.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   },
   {
-    "id": "dr-babasaheb-agri",
-    "name": "Dr. Babasaheb Ambedkar Agri Swavalamban (Maharashtra)",
-    "name_hi": "डॉ. बाबासाहेब अंबेडकर कृषि स्वावलंबन",
-    "name_mr": "डॉ. बाबासाहेब आंबेडकर कृषी स्वावलंबन",
+    "id": "deds",
+    "name": "Dairy Entrepreneurship Development Scheme (DEDS)",
     "category": [
       "agriculture",
-      "welfare",
-      "SC_ST"
+      "livestock"
+    ],
+    "benefit_amount": 35000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": false,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "bank_account",
+      "business_proof"
+    ],
+    "description": "Back-ended subsidy for setting up small dairy farms, rearing calf units, and establishing vermicompost units.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "pmmsy",
+    "name": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+    "category": [
+      "agriculture",
+      "fisheries"
+    ],
+    "benefit_amount": 300000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": false,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "bank_account",
+      "trade_certificate"
+    ],
+    "description": "Brings the Blue Revolution through sustainable and responsible development of the fisheries sector with 40-60% subsidies.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "operation-greens",
+    "name": "Operation Greens",
+    "category": [
+      "agriculture",
+      "market"
+    ],
+    "benefit_amount": 50000000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": false,
+      "crop_required": true,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "bank_account",
+      "business_proof"
+    ],
+    "description": "Provides 50% subsidy on transportation and storage of TOP (Tomato, Onion, Potato) and other crops to stabilize prices.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "acabc",
+    "name": "Agri-Clinics & Agri-Business Centres (ACABC)",
+    "category": [
+      "agriculture",
+      "business"
+    ],
+    "benefit_amount": 2000000,
+    "benefit_type": "credit",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": false,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "bank_account",
+      "education_certificate"
+    ],
+    "description": "Supports unemployed agri-graduates to set up clinics and business centers with 36-44% composite subsidy on viable projects.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "wdc-pmksy",
+    "name": "Watershed Development Component (WDC-PMKSY)",
+    "category": [
+      "agriculture",
+      "irrigation"
+    ],
+    "benefit_amount": 100000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.5,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account"
+    ],
+    "description": "Reclaiming degraded lands and enhancing rain-fed agriculture via soil and moisture conservation.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "rad",
+    "name": "Rainfed Area Development (RAD)",
+    "category": [
+      "agriculture",
+      "development"
+    ],
+    "benefit_amount": 50000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.5,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account"
+    ],
+    "description": "Integrated farming system covering crops, horticulture, livestock, and agro-forestry to steady farmers' incomes.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "crm",
+    "name": "Crop Residue Management Scheme",
+    "category": [
+      "agriculture",
+      "technology"
+    ],
+    "benefit_amount": 150000,
+    "benefit_type": "subsidy",
+    "states": [
+      "Punjab",
+      "Haryana",
+      "Uttar Pradesh",
+      "Delhi"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 1.0,
+      "crop_required": true,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account",
+      "quotation_machinery"
+    ],
+    "description": "80% subsidy given to establish Custom Hiring Centres and 50% for individual farmers to buy residue management machinery.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "midh",
+    "name": "Mission for Integrated Development of Horticulture (MIDH)",
+    "category": [
+      "agriculture",
+      "development"
     ],
     "benefit_amount": 250000,
     "benefit_type": "subsidy",
-    "benefit_frequency": "one_time",
-    "benefit_description": "Up to ₹2.5L subsidy for SC/Buddhist farmers: farm pond + drip irrigation + power pump + soil health",
-    "deadline": "2026-03-31",
-    "deadline_label": "Annual application via Mahadbt",
     "states": [
-      "Maharashtra"
+      "all"
     ],
     "eligibility": {
-      "occupation": [
-        "farmer"
-      ],
-      "max_land_acres": 14.8,
-      "min_land_acres": 1.0,
-      "max_annual_income": null,
-      "caste": [
-        "SC"
-      ],
-      "gender": [
-        "all"
-      ],
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.5,
+      "crop_required": false,
       "age_min": 18,
-      "age_max": null,
-      "must_have": [
-        "land_record",
-        "aadhaar",
-        "bank_account",
-        "caste_certificate"
-      ],
       "disqualifiers": []
     },
     "documents_required": [
       "aadhaar",
-      "land_record_7_12",
-      "caste_certificate",
-      "bank_passbook"
+      "land_record",
+      "bank_account",
+      "irrigation_plan"
     ],
-    "apply_url": "https://mahadbt.maharashtra.gov.in",
-    "apply_mode": [
-      "online"
-    ],
-    "description": "Comprehensive farm development subsidy package for SC/Buddhist farmers in Maharashtra.",
-    "description_hi": "महाराष्ट्र के SC/बौद्ध किसानों के लिए ₹2.5 लाख तक का समग्र कृषि विकास अनुदान।",
-    "description_mr": "महाराष्ट्रातील SC/बौद्ध शेतकऱ्यांसाठी ₹2.5 लाखापर्यंत समग्र शेती विकास अनुदान.",
-    "tags": [
-      "SC/ST",
+    "description": "Provides financial, technical and extension support to grow horticulture sector covering fruits, vegetables, root/tuber crops, mushrooms, spices, flowers.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "nbm",
+    "name": "National Bamboo Mission (NBM)",
+    "category": [
       "agriculture",
-      "maharashtra",
-      "state"
+      "development"
     ],
-    "ministry": "Maharashtra Social Justice Department",
-    "beneficiary_type": [
-      "farmer"
+    "benefit_amount": 50000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
     ],
-    "quota_filled_percent": 45,
-    "ineligibility_rules": {
-      "caste": "Only SC/Navabuddha farmers are eligible",
-      "states": "Only Maharashtra farmers are eligible"
-    }
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.5,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account"
+    ],
+    "description": "Focuses on boosting the cultivation of bamboo on non-forest private/government lands with subsidies up to \u20b950,000 per hectare.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "ahidf",
+    "name": "Animal Husbandry Infrastructure Development Fund (AHIDF)",
+    "category": [
+      "agriculture",
+      "livestock"
+    ],
+    "benefit_amount": 10000000,
+    "benefit_type": "credit",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": false,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "bank_account",
+      "business_proof"
+    ],
+    "description": "Provides 3% interest subvention and 25% credit guarantee to incentivize investments in dairy and meat processing and animal feed plants.",
+    "apply_url": "https://ahidf.udyamimitra.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "gramin-bhandaran",
+    "name": "Gramin Bhandaran Yojana",
+    "category": [
+      "agriculture",
+      "infrastructure"
+    ],
+    "benefit_amount": 3000000,
+    "benefit_type": "subsidy",
+    "states": [
+      "all"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 1.0,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account",
+      "site_plan"
+    ],
+    "description": "Capital investment subsidy scheme for construction/renovation of rural godowns (maximum up to 33.33% subsidy).",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "mksy",
+    "name": "Mukhya Mantri Krishi Ashirwad Yojana",
+    "category": [
+      "agriculture",
+      "income_support"
+    ],
+    "benefit_amount": 25000,
+    "benefit_type": "cash",
+    "states": [
+      "Jharkhand"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.1,
+      "max_land_acres": 5.0,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": [
+        "government_employee"
+      ]
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account"
+    ],
+    "description": "Provides \u20b95,000 per acre to small and marginal farmers of Jharkhand with a maximum ceiling of up to \u20b925,000 to assist in timely agriculture input purchases.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
+  },
+  {
+    "id": "rytu-bandhu",
+    "name": "Rythu Bandhu Scheme",
+    "category": [
+      "agriculture",
+      "income_support"
+    ],
+    "benefit_amount": 10000,
+    "benefit_type": "cash",
+    "states": [
+      "Telangana"
+    ],
+    "eligibility": {
+      "farmer_required": true,
+      "land_required": true,
+      "min_land_acres": 0.1,
+      "crop_required": false,
+      "age_min": 18,
+      "disqualifiers": []
+    },
+    "documents_required": [
+      "aadhaar",
+      "land_record",
+      "bank_account"
+    ],
+    "description": "Provides \u20b910,000 per acre per year (\u20b95,000 per season) to all farmers in Telangana towards investment support for agriculture.",
+    "apply_url": "https://agricoop.nic.in/",
+    "is_active": true,
+    "confidence_score": 1.0
   }
 ]

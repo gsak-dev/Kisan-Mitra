@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Layout from '../components/Layout/Navbar'
 import { useUser } from '../context/UserContext'
-import { runWhatIf } from '../utils/eligibilityEngine'
+import { whatIfAPI } from '../utils/api'
 import { Sliders, TrendingUp, TrendingDown, ArrowRight, XCircle } from 'lucide-react'
 
 export default function BenefitCalc() {
@@ -23,22 +23,22 @@ export default function BenefitCalc() {
 
     const [result, setResult] = useState(null)
 
-    // Run simulation automatically when sliders/inputs change
+    // Run simulation via backend API when sliders/inputs change
     useEffect(() => {
         if (!profile) return
-        // Parse numerical values safely
         const parsedChanges = { ...changes }
         if (parsedChanges.land_acres !== '') parsedChanges.land_acres = Number(parsedChanges.land_acres)
         if (parsedChanges.annual_income !== '') parsedChanges.annual_income = Number(parsedChanges.annual_income)
         if (parsedChanges.age !== '') parsedChanges.age = Number(parsedChanges.age)
 
-        const sim = runWhatIf(profile, parsedChanges)
-
-        // Calculate the financial difference
-        const gainedAmt = sim.gained.reduce((sum, s) => sum + (s.benefit_amount || 0), 0)
-        const lostAmt = sim.lost.reduce((sum, s) => sum + (s.benefit_amount || 0), 0)
-
-        setResult({ ...sim, gainedAmt, lostAmt, netDiff: gainedAmt - lostAmt })
+        whatIfAPI(profile, parsedChanges)
+            .then(res => {
+                const sim = res.data
+                const gainedAmt = (sim.gained || []).reduce((sum, s) => sum + (s.benefit_amount || 0), 0)
+                const lostAmt = (sim.lost || []).reduce((sum, s) => sum + (s.benefit_amount || 0), 0)
+                setResult({ ...sim, gainedAmt, lostAmt, netDiff: gainedAmt - lostAmt })
+            })
+            .catch(err => console.error('What-if API error:', err))
     }, [changes, profile])
 
     if (!profile) return null

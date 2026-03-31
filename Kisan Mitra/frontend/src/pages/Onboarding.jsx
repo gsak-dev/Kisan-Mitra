@@ -8,16 +8,10 @@ import toast from 'react-hot-toast'
 const STATES = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal']
 const CROPS = ['Wheat', 'Rice', 'Jowar', 'Bajra', 'Cotton', 'Sugarcane', 'Soybean', 'Onion', 'Tomato', 'Maize', 'Tur/Arhar', 'Gram/Chana', 'Groundnut', 'Other']
 const OCCUPATIONS = [
-    { value: 'farmer', label: '🌾 Farmer / Cultivator' },
+    { value: 'farmer', label: '🌾 Landowning Farmer' },
+    { value: 'tenant_farmer', label: '🚜 Tenant Farmer' },
     { value: 'agricultural_laborer', label: '👷 Agricultural Laborer' },
-    { value: 'artisan', label: '🔨 Artisan / Craftsperson' },
-    { value: 'self_employed', label: '💼 Self-employed / Micro-business' },
-    { value: 'daily_wage', label: '⚒️ Daily Wage Worker' },
-    { value: 'homemaker', label: '🏠 Homemaker' },
-    { value: 'student', label: '🎓 Student' },
-    { value: 'other', label: '🔖 Other' },
 ]
-const CRAFT_TYPES = ['Carpenter', 'Blacksmith', 'Potter', 'Weaver', 'Cobbler/Shoemaker', 'Tailor', 'Goldsmith', 'Barber', 'Washerman', 'Sculptor', 'Mason', 'Fisherman', 'Other']
 
 const STEPS = ['Personal Info', 'Livelihood', 'Financial', 'Documents']
 
@@ -30,13 +24,11 @@ export default function Onboarding() {
 
     const [form, setForm] = useState({
         name: '', age: '', state: 'Maharashtra', district: '', language: 'hi', gender: 'male', caste: 'OBC',
-        occupation: 'farmer', land_ownership: 'owned', land_acres: 2, crops: [], irrigation: 'borewell', craft_type: '',
+        occupation: 'farmer', land_ownership: 'owned', land_acres: 2, crops: [], irrigation: 'borewell',
         annual_income: 100000, has_bank_account: true, has_aadhaar: true, is_income_tax_payer: false,
-        is_government_employee: false, has_kcc: false, is_bpl: false, has_farm_loan: false, is_shg_member: false,
-        has_lpg_connection: false, has_kutcha_house: false, has_girl_child: false, girl_child_age: '',
+        is_government_employee: false, has_kcc: false, has_farm_loan: false, has_tractor: false, is_fpo_member: false,
         has_aadhaar_doc: true, has_pan: false, has_land_record: true, has_income_certificate: false,
-        has_caste_certificate: false, has_ration_card: false, has_bpl_card: false, has_education_cert: false,
-        is_rural: true,
+        has_caste_certificate: false, has_ration_card: false, is_rural: true,
     })
 
     const set = (key, val) => setForm(f => ({ ...f, [key]: val }))
@@ -53,25 +45,45 @@ export default function Onboarding() {
     const handleBack = () => setStep(s => s - 1)
 
     const handleSubmit = async () => {
-        if (!form.name) { toast.error('Please complete your profile'); return }
+        if (!form.name) {
+            toast.error('Please complete your profile')
+            return
+        }
+
         setSaving(true)
+
         const profile = {
             ...form,
-            has_aadhaar: form.has_aadhaar_doc,
-            language: form.language,
+
+            // ✅ FIX 1: normalize occupation
+            occupation: form.occupation.replace('_', ' '),
+
+            // ✅ FIX 2: lowercase crops
+            crops: form.crops.map(c => c.toLowerCase()),
+
+            // ✅ FIX 3: irrigation already lowercase but safe
+            irrigation: (form.irrigation || '').toLowerCase(),
+
+            // ✅ FIX 4: backend expects this
+            has_aadhaar: form.has_aadhaar_doc
         }
+
+        console.log("🚀 FINAL PROFILE SENT:", profile) // DEBUG
+
         try {
             await saveProfileToSupabase(profile)
             toast.success('Profile saved! Finding your schemes...')
             navigate('/dashboard')
         } catch (e) {
+            console.log("Demo mode profile:", profile)
             setDemoProfile(profile)
             navigate('/dashboard')
-        } finally { setSaving(false) }
+        } finally {
+            setSaving(false)
+        }
     }
 
-    const isFarmer = form.occupation === 'farmer' || form.occupation === 'agricultural_laborer'
-    const isArtisan = form.occupation === 'artisan'
+    const isFarmer = form.occupation === 'farmer' || form.occupation === 'tenant_farmer' || form.occupation === 'agricultural_laborer'
 
     const pct = Math.round(((step + 1) / 4) * 100)
 
@@ -184,15 +196,7 @@ export default function Onboarding() {
                                 </div>
                             </div>
 
-                            {isArtisan && (
-                                <div>
-                                    <label className="label">Craft Type</label>
-                                    <select className="input" value={form.craft_type} onChange={e => set('craft_type', e.target.value)}>
-                                        <option value="">Select craft...</option>
-                                        {CRAFT_TYPES.map(c => <option key={c}>{c}</option>)}
-                                    </select>
-                                </div>
-                            )}
+
 
                             {isFarmer && (
                                 <>
@@ -278,12 +282,9 @@ export default function Onboarding() {
                                     ['is_income_tax_payer', 'Income Tax Payer'],
                                     ['is_government_employee', 'Government Employee'],
                                     ['has_kcc', 'Kisan Credit Card (KCC)'],
-                                    ['is_bpl', 'BPL Card Holder'],
                                     ['has_farm_loan', 'Outstanding Farm Loan'],
-                                    ['is_shg_member', 'SHG Member (Women SHG)'],
-                                    ['has_lpg_connection', 'Has LPG Connection'],
-                                    ['has_kutcha_house', 'Living in Kutcha House'],
-                                    ['has_girl_child', 'Has Girl Child'],
+                                    ['has_tractor', 'Owns a Tractor'],
+                                    ['is_fpo_member', 'Member of an FPO'],
                                 ].map(([key, label]) => (
                                     <label key={key} style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '10px 14px', background: form[key] ? '#f0fdf4' : '#f9fafb', border: form[key] ? '1.5px solid #16a34a' : '1.5px solid #e5e7eb', borderRadius: 10, fontSize: '.85rem', fontWeight: 600 }}>
                                         <input type="checkbox" checked={!!form[key]} onChange={e => set(key, e.target.checked)} style={{ accentColor: '#16a34a', width: 16, height: 16 }} />
@@ -291,12 +292,6 @@ export default function Onboarding() {
                                     </label>
                                 ))}
                             </div>
-                            {form.has_girl_child && (
-                                <div>
-                                    <label className="label">Girl Child Age (years)</label>
-                                    <input className="input" type="number" value={form.girl_child_age} onChange={e => set('girl_child_age', e.target.value)} placeholder="e.g., 5" min="0" max="20" style={{ maxWidth: 200 }} />
-                                </div>
-                            )}
                         </div>
                     )}
 
@@ -312,10 +307,6 @@ export default function Onboarding() {
                                 ['has_caste_certificate', '📜 Caste Certificate'],
                                 ['has_bank_account', '🏦 Bank Passbook'],
                                 ['has_ration_card', '🧾 Ration Card'],
-                                ['has_bpl_card', '🔖 BPL Card'],
-                                ['has_education_cert', '🎓 Education Certificate'],
-                                ['has_girl_birth_cert', '👶 Girl Child Birth Certificate'],
-                                ['has_trade_cert', '🔨 Trade / Craft Certificate'],
                             ].map(([key, label]) => (
                                 <label key={key} style={{ display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer', padding: '12px 16px', background: form[key] ? '#f0fdf4' : 'white', border: form[key] ? '1.5px solid #16a34a' : '1.5px solid #e5e7eb', borderRadius: 10, fontSize: '.88rem', fontWeight: 600 }}>
                                     <input type="checkbox" checked={!!form[key]} onChange={e => set(key, e.target.checked)} style={{ accentColor: '#16a34a', width: 18, height: 18 }} />

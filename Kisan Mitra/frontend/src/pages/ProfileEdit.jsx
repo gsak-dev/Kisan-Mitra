@@ -7,22 +7,15 @@ import {
     Pickaxe, Home, GraduationCap, FileQuestion, IdCard, CreditCard,
     Map as MapIcon, FileText, Users, Landmark, ShoppingCart, Tag, Baby, Wrench, Save
 } from 'lucide-react'
-import { runEligibility } from '../utils/eligibilityEngine'
 import toast from 'react-hot-toast'
 
 const STATES = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal']
 const CROPS = ['Wheat', 'Rice', 'Jowar', 'Bajra', 'Cotton', 'Sugarcane', 'Soybean', 'Onion', 'Tomato', 'Maize', 'Tur/Arhar', 'Gram/Chana', 'Groundnut', 'Other']
 const OCCUPATIONS = [
-    { value: 'farmer', label: 'Farmer / Cultivator', icon: Sprout },
+    { value: 'farmer', label: 'Landowning Farmer', icon: Sprout },
+    { value: 'tenant_farmer', label: 'Tenant Farmer', icon: Sprout },
     { value: 'agricultural_laborer', label: 'Agricultural Laborer', icon: HardHat },
-    { value: 'artisan', label: 'Artisan', icon: Hammer },
-    { value: 'self_employed', label: 'Self-employed / Micro-biz', icon: Briefcase },
-    { value: 'daily_wage', label: 'Daily Wage Worker', icon: Pickaxe },
-    { value: 'homemaker', label: 'Homemaker', icon: Home },
-    { value: 'student', label: 'Student', icon: GraduationCap },
-    { value: 'other', label: 'Other', icon: FileQuestion },
 ]
-const CRAFT_TYPES = ['Carpenter', 'Blacksmith', 'Potter', 'Weaver', 'Cobbler/Shoemaker', 'Tailor', 'Goldsmith', 'Barber', 'Washerman', 'Sculptor', 'Mason', 'Fisherman', 'Other']
 
 export default function ProfileEdit() {
     const navigate = useNavigate()
@@ -101,8 +94,7 @@ export default function ProfileEdit() {
         }
     }
 
-    const isFarmer = form.occupation === 'farmer' || form.occupation === 'agricultural_laborer'
-    const isArtisan = form.occupation === 'artisan'
+    const isFarmer = form.occupation === 'farmer' || form.occupation === 'tenant_farmer' || form.occupation === 'agricultural_laborer'
 
     return (
         <div style={{ maxWidth: 800, margin: '30px auto', padding: '0 20px', paddingBottom: 80 }}>
@@ -180,15 +172,7 @@ export default function ProfileEdit() {
                         </div>
                     </div>
 
-                    {isArtisan && (
-                        <div>
-                            <label className="label">Craft Type</label>
-                            <select className="input" value={form.craft_type} onChange={e => set('craft_type', e.target.value)}>
-                                <option value="">Select craft...</option>
-                                {CRAFT_TYPES.map(c => <option key={c}>{c}</option>)}
-                            </select>
-                        </div>
-                    )}
+
 
                     {isFarmer && (
                         <div style={{ padding: 16, background: '#f9fafb', borderRadius: 12, border: '1px solid #e5e7eb' }}>
@@ -260,12 +244,9 @@ export default function ProfileEdit() {
                             ['is_income_tax_payer', 'Income Tax Payer'],
                             ['is_government_employee', 'Government Employee'],
                             ['has_kcc', 'Kisan Credit Card (KCC)'],
-                            ['is_bpl', 'BPL Card Holder'],
                             ['has_farm_loan', 'Outstanding Farm Loan'],
-                            ['is_shg_member', 'SHG Member (Women SHG)'],
-                            ['has_lpg_connection', 'Has LPG Connection'],
-                            ['has_kutcha_house', 'Living in Kutcha House'],
-                            ['has_girl_child', 'Has Girl Child'],
+                            ['has_tractor', 'Owns a Tractor'],
+                            ['is_fpo_member', 'Member of an FPO'],
                         ].map(([key, label]) => (
                             <label key={key} style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', padding: '10px 14px', background: form[key] ? '#f0fdf4' : '#f9fafb', border: form[key] ? '1.5px solid #16a34a' : '1.5px solid #e5e7eb', borderRadius: 10, fontSize: '.85rem', fontWeight: 600 }}>
                                 <input type="checkbox" checked={!!form[key]} onChange={e => set(key, e.target.checked)} style={{ accentColor: '#16a34a', width: 16, height: 16 }} />
@@ -273,12 +254,6 @@ export default function ProfileEdit() {
                             </label>
                         ))}
                     </div>
-                    {form.has_girl_child && (
-                        <div style={{ marginTop: 12 }}>
-                            <label className="label">Girl Child Age (years)</label>
-                            <input className="input" type="number" value={form.girl_child_age} onChange={e => set('girl_child_age', e.target.value)} placeholder="e.g., 5" min="0" max="20" style={{ maxWidth: 200 }} />
-                        </div>
-                    )}
                 </section>
 
                 {/* 4. Documents */}
@@ -293,10 +268,6 @@ export default function ProfileEdit() {
                             ['has_caste_certificate', 'Caste Certificate', Users],
                             ['has_bank_account', 'Bank Passbook', Landmark],
                             ['has_ration_card', 'Ration Card', ShoppingCart],
-                            ['has_bpl_card', 'BPL Card', Tag],
-                            ['has_education_cert', 'Education Certificate', GraduationCap],
-                            ['has_girl_birth_cert', 'Girl Child Birth Cert', Baby],
-                            ['has_trade_cert', 'Trade / Craft Cert', Wrench],
                         ].map(([key, label, Icon]) => (
                             <label key={key} style={{ display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer', padding: '10px 14px', background: form[key] ? '#f0fdf4' : 'white', border: form[key] ? '1.5px solid #16a34a' : '1.5px solid #e5e7eb', borderRadius: 10, fontSize: '.85rem', fontWeight: 600 }}>
                                 <input type="checkbox" checked={!!form[key]} onChange={e => set(key, e.target.checked)} style={{ accentColor: '#16a34a', width: 16, height: 16 }} />

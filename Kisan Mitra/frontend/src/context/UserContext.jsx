@@ -4,7 +4,7 @@
  */
 import { createContext, useContext, useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
-import { runEligibility } from '../utils/eligibilityEngine'
+import { checkEligibilityAPI } from '../utils/api'
 
 const supabase = createClient(
     import.meta.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co',
@@ -33,11 +33,22 @@ export function UserProvider({ children }) {
         return () => subscription.unsubscribe()
     }, [])
 
+    const fetchEligibility = async (profile) => {
+        try {
+            setLoading(true)
+            const res = await checkEligibilityAPI(profile)
+            setEligibilityResults(res.data.results || [])
+        } catch (err) {
+            console.error("Eligibility API error:", err)
+        } finally {
+            setLoading(false)
+        }
+    }
+
     // Re-run eligibility when profile changes
     useEffect(() => {
         if (profile) {
-            const results = runEligibility(profile)
-            setEligibilityResults(results)
+            fetchEligibility(profile)
             localStorage.setItem('km_profile', JSON.stringify(profile))
         } else {
             setEligibilityResults([])
